@@ -27,5 +27,21 @@ const quizData = [
         image: "assets/images/shawshank.jpg",
       },
 
+      {
+        question: "What is the name of the planet in Avatar?",
+        options: ["Patrick", "Pluto", "Precious", "Pandora"],
+        answer: "Pandora",
+        image: "assets/images/pandora.jpg",
+      },
+
+      {
+        question: "What James Bond´s favourite drink?",
+        options: ["Vodka Martini", "Beer", "Negroni", "White Russian"],
+        answer: "Vodka Martini",
+        image: "assets/images/martini.jpg",
+      },
+
+
+
       
 
