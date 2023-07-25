@@ -54,6 +54,24 @@ const feedbackImage = document.getElementById("feedback-image");
 const submitButton = document.getElementById("submit-btn");
 const nextButton = document.getElementById("next-btn");
 
+/* Displays the current quiz question and answer options */
+function displayQuestion() {
+  const currentQuizData = quizData[currentQuestion];
+  questionText.textContent = currentQuizData.question;
+
+  optionsContainer.innerHTML = "";
+
+  currentQuizData.options.forEach((option) => {
+      const button = document.createElement("button");
+      button.className = "option";
+      button.textContent = option;
+      optionsContainer.appendChild(button);
+      button.addEventListener("click", checkAnswer);
+    });
+  }
+
+  
+
 
 
       
