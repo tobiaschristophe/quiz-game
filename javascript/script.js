@@ -94,6 +94,34 @@ function displayQuestion() {
         nextButton.style.display = "block";
       }
 
-      
+      /*Move to the next question or display final score*/
+      function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < quizData.length) {
+
+    
+            displayQuestion();
+            feedbackText.textContent = "";
+            feedbackImage.src = "";
+            submitButton.style.display = "block";
+            nextButton.style.display = "none";
+
+
+            const answerButtons = document.querySelectorAll(".option");
+            answerButtons.forEach((button) => {
+              button.addEventListener("click", checkAnswer);
+            });
+          } else {
+            
+            questionText.textContent = `Quiz completed! Your score is ${score} out of ${quizData.length}.`;
+            optionsContainer.innerHTML = "";
+            feedbackText.textContent = "";
+            feedbackImage.src = "";
+            submitButton.style.display = "none";
+            nextButton.style.display = "none";
+          }
+        }
+
+
       
 
