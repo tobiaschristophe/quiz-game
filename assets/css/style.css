@@ -1,70 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .game-area {
-    width: 75%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .quiz-question {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .quiz-question p {
-    margin: 0;
-    line-height: 1.6;
-  }
-  
-  .quiz-answers {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .quiz-answer {
-    margin: 10px 0;
-  }
-  
-  .quiz-answer label {
-    cursor: pointer;
-  }
-  
-  .quiz-answer input[type="radio"] {
-    margin-right: 8px;
-  }
-  
-  .quiz-result {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  img {
-    max-width: 50%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 10px;
-    display: block; 
-  }
 
-  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Quiz Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading Style */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Main Quiz Area */
+.game-area {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Quiz Question Container */
+.quiz-question {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Question Text */
+.quiz-question p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Quiz Answers List */
+.quiz-answers {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Answer Option Style */
+.quiz-answer {
+  margin: 10px 0;
+}
+
+/* Cursor Pointer on Answer Labels */
+.quiz-answer label {
+  cursor: pointer;
+}
+
+/* Option Radio Button Style */
+.quiz-answer input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Quiz Result Text */
+.quiz-result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Image Style */
+img {
+  max-width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 10px;
+  display: block; 
+}
+
+/* Answer Option Buttons */
+.option {
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+}
+
+/* Options Container */
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Feedback Text Container */
+#feedback-text {
+  height: 30px;
+}
+
+/* Next Button */
+#next-btn {
+  display: block;
+  margin: 0 auto;
+}
   
