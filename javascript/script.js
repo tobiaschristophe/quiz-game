@@ -70,9 +70,30 @@ function displayQuestion() {
     });
   }
 
+  /* Checks answer and provides feedback*/
+  function checkAnswer(event) {
+    const selectedOption = event.target.textContent;
+    const currentQuizData = quizData[currentQuestion];
   
+    if (selectedOption === currentQuizData.answer) {
+      feedbackText.textContent = "Correct answer!";
+      feedbackImage.src = currentQuizData.image;
+      score++;
+    } else {
+      feedbackText.textContent = "Wrong answer. Try again!";
+      feedbackImage.src = "";
+    }
 
+    /* Reset answer button, hide submit and show next*/
+    const answerButtons = document.querySelectorAll(".option");
+        answerButtons.forEach((button) => {
+          button.removeEventListener("click", checkAnswer);
+        });     
+        
+        submitButton.style.display = "none";
+        nextButton.style.display = "block";
+      }
 
-
+      
       
 
