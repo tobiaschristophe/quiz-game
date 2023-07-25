@@ -122,6 +122,12 @@ function displayQuestion() {
           }
         }
 
+        /* Quiz setup and start*/
+        submitButton.addEventListener("click", checkAnswer);
+
+        nextButton.addEventListener("click", nextQuestion);
+
+        displayQuestion();
 
       
 
