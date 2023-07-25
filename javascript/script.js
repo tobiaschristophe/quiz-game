@@ -1,3 +1,4 @@
+/* Questions for the quiz */
 const quizData = [
     {
       question: "Leonardo Dicaprio won an Oscar for which movie?",
@@ -40,6 +41,18 @@ const quizData = [
         answer: "Vodka Martini",
         image: "assets/images/martini.jpg",
       },
+    ];
+
+let currentQuestion = 0;
+let score = 0;
+
+/* Variables that represents different HTML elements*/
+const questionText = document.getElementById("question-text");
+const optionsContainer = document.getElementById("options");
+const feedbackText = document.getElementById("feedback-text");
+const feedbackImage = document.getElementById("feedback-image");
+const submitButton = document.getElementById("submit-btn");
+const nextButton = document.getElementById("next-btn");
 
 
 
