@@ -1,4 +1,5 @@
 /* Questions for the quiz */
+/*jshint esversion: 6 */
 const quizData = [
     {
       question: "Leonardo Dicaprio won an Oscar for which movie?",
