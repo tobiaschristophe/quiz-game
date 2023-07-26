@@ -59,7 +59,6 @@ function displayQuestion() {
   questionText.textContent = currentQuizData.question;
 
   optionsContainer.innerHTML = "";
-
   currentQuizData.options.forEach((option) => {
     const button = document.createElement("button");
     button.className = "option";
@@ -68,34 +67,42 @@ function displayQuestion() {
     button.addEventListener("click", checkAnswer);
   });
 
-  nextButton.style.display = "block"; 
-  
+  nextButton.style.display = "block";
+  feedbackImage.src = "";
+
+  if (currentQuestion === 0) {
+    feedbackText.textContent = ""; 
+    
+    
+  } else {
+    
+    feedbackText.textContent = "Feedback text";
+    
+  }
 }
 
   /* Checks answer and provides feedback*/
   function checkAnswer(event) {
     const selectedOption = event.target.textContent;
     const currentQuizData = quizData[currentQuestion];
-
+  
     feedbackImage.src = currentQuizData.image;
   
     if (selectedOption === currentQuizData.answer) {
       feedbackText.textContent = "Correct answer!";
-      feedbackImage.src = currentQuizData.image;
       score++;
     } else {
       feedbackText.textContent = `Wrong answer. The correct answer was: ${currentQuizData.answer}. Try again!`;
-      
     }
 
     /* Reset answer button, hide submit and show next*/
     const answerButtons = document.querySelectorAll(".option");
-        answerButtons.forEach((button) => {
-          button.removeEventListener("click", checkAnswer);
-        });     
-        
+  answerButtons.forEach((button) => {
+    button.removeEventListener("click", checkAnswer);
+  });
+}        
   
-      }
+      
 
       /*Move to the next question or display final score*/
       function nextQuestion() {
@@ -113,8 +120,8 @@ function displayQuestion() {
           questionText.textContent = `Quiz completed! Your score is ${score} out of ${quizData.length}.`;
           optionsContainer.innerHTML = "";
           feedbackText.textContent = "";
-          feedbackImage.src = "";
           nextButton.style.display = "none";
+          feedbackImage.src = "";
         }
       }
 
