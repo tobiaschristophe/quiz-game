@@ -96,6 +96,7 @@ img {
 /* Feedback Text Container */
 #feedback-text {
   height: 30px;
+  margin-bottom: 30px;
 }
 
 /* Next Button */

@@ -69,6 +69,7 @@ function displayQuestion() {
 
   nextButton.style.display = "block";
   feedbackImage.src = "";
+  
 
   if (currentQuestion === 0) {
     feedbackText.textContent = ""; 
@@ -87,6 +88,7 @@ function displayQuestion() {
     const currentQuizData = quizData[currentQuestion];
   
     feedbackImage.src = currentQuizData.image;
+    feedbackImage.setAttribute("alt", "An image displaying the correct answer"); /*new code wednesday*/
   
     if (selectedOption === currentQuizData.answer) {
       feedbackText.textContent = "Correct answer!";
@@ -111,6 +113,7 @@ function displayQuestion() {
           displayQuestion();
           feedbackText.textContent = "";
           feedbackImage.src = "";
+          feedbackImage.removeAttribute("alt");/*new code wednesday*/
       
           const answerButtons = document.querySelectorAll(".option");
           answerButtons.forEach((button) => {
@@ -122,6 +125,7 @@ function displayQuestion() {
           feedbackText.textContent = "";
           nextButton.style.display = "none";
           feedbackImage.src = "";
+          feedbackImage.removeAttribute("alt");/*new code wednesday*/
         }
       }
 
