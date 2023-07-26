@@ -92,7 +92,7 @@ function displayQuestion() {
     const currentQuizData = quizData[currentQuestion];
   
     feedbackImage.src = currentQuizData.image;
-    feedbackImage.setAttribute("alt", "An image displaying the correct answer"); /*new code wednesday*/
+    feedbackImage.setAttribute("alt", "An image displaying the correct answer"); 
   
     if (selectedOption === currentQuizData.answer) {
       console.log("Correct answer!");
@@ -110,8 +110,6 @@ function displayQuestion() {
   });
 }        
   
-      
-
       /*Move to the next question or display final score*/
       function nextQuestion() {
         console.log("Moving to the next question.");
@@ -121,7 +119,7 @@ function displayQuestion() {
           displayQuestion();
           feedbackText.textContent = "";
           feedbackImage.src = "";
-          feedbackImage.removeAttribute("alt");/*new code wednesday*/
+          feedbackImage.removeAttribute("alt");
       
           const answerButtons = document.querySelectorAll(".option");
           answerButtons.forEach((button) => {
@@ -134,13 +132,11 @@ function displayQuestion() {
           feedbackText.textContent = "";
           nextButton.style.display = "none";
           feedbackImage.src = "";
-          feedbackImage.removeAttribute("alt");/*new code wednesday*/
+          feedbackImage.removeAttribute("alt");
         }
       }
 
         /* Quiz setup and start*/
-        
-
         nextButton.addEventListener("click", nextQuestion);
 
         displayQuestion();
