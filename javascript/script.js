@@ -55,6 +55,7 @@ const nextButton = document.getElementById("next-btn");
 
 /* Displays the current quiz question and answer options */
 function displayQuestion() {
+  console.log("Displaying question:", currentQuestion);
   const currentQuizData = quizData[currentQuestion];
   questionText.textContent = currentQuizData.question;
 
@@ -72,11 +73,12 @@ function displayQuestion() {
   
 
   if (currentQuestion === 0) {
+    console.log("This is the first question.");
     feedbackText.textContent = ""; 
     
     
   } else {
-    
+    console.log("Displaying feedback text.");
     feedbackText.textContent = "Feedback text";
     
   }
@@ -84,6 +86,7 @@ function displayQuestion() {
 
   /* Checks answer and provides feedback*/
   function checkAnswer(event) {
+    console.log("Checking answer...");
     const selectedOption = event.target.textContent;
     const currentQuizData = quizData[currentQuestion];
   
@@ -91,9 +94,11 @@ function displayQuestion() {
     feedbackImage.setAttribute("alt", "An image displaying the correct answer"); /*new code wednesday*/
   
     if (selectedOption === currentQuizData.answer) {
+      console.log("Correct answer!");
       feedbackText.textContent = "Correct answer!";
       score++;
     } else {
+      console.log("Wrong answer.");
       feedbackText.textContent = `Wrong answer. The correct answer was: ${currentQuizData.answer}. Try again!`;
     }
 
@@ -108,8 +113,10 @@ function displayQuestion() {
 
       /*Move to the next question or display final score*/
       function nextQuestion() {
+        console.log("Moving to the next question.");
         currentQuestion++;
         if (currentQuestion < quizData.length) {
+          console.log("Displaying next question.");
           displayQuestion();
           feedbackText.textContent = "";
           feedbackImage.src = "";
@@ -120,6 +127,7 @@ function displayQuestion() {
             button.addEventListener("click", checkAnswer);
           });
         } else {
+          console.log("Quiz completed!");
           questionText.textContent = `Quiz completed! Your score is ${score} out of ${quizData.length}.`;
           optionsContainer.innerHTML = "";
           feedbackText.textContent = "";
