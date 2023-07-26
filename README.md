@@ -18,9 +18,9 @@ Movie Quiz is a site that uses HTML, CSS and JavaScript. It´s a responsive game
 
 ![Image Alt Text](assets/css/images/feedback.jpg)
 
-* Feedback-area: This section (the final part of the quiz) shows the users final score. 
+* Score-area: This section (the final part of the quiz) shows the users final score. 
 
-![Image Alt Text](assets/css/images/feedback.jpg)
+![Image Alt Text](assets/css/images/score.jpg)
 
 # Validator testing
 
@@ -38,6 +38,29 @@ Movie Quiz is a site that uses HTML, CSS and JavaScript. It´s a responsive game
 - Function with the largest signature take 1 arguments, while the median is 1.
 - Largest function has 17 statements in it, while the median is 8.5.
 - The most complex function has a cyclomatic complexity value of 2 while the median is 1.5.
+
+# Unfixed bugs
+
+* The previously mentioned problem with the alt-text in the html code. Since the game works they way it was designed, I decided to leave this bug due to lack of understanding/knowledge how to resolve it. 
+
+# Deployment
+
+* The site was deployed to GitHub pages. The steps to deploy are as follows:
+* In the GitHub repository, navigate to the Settings tab.
+* Qlick settings, then pages.
+* Choose main branch and save. 
+
+The live link can be found here - https://tobiaschristophe.github.io/quiz-game/
+
+# Credits
+
+## Content 
+* I used the readme from Code Institute (I love maths) as a template when wrighting this one. 
+* I made the game area 75% (this was shown in an instructional video from Code Institute before starting this project)
+
+## Media
+* All the images are from google. 
+
 
 
 
